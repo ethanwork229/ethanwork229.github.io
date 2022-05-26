@@ -1,0 +1,48 @@
+<%let header%>
+<% if (authHeader=="true") {header = "partials/header.ejs"}else{header="partials/un-auth-header.ejs"}%>
+
+<%- include(header); -%>
+
+    <!--body-->
+
+   
+    <div class="main-content">
+        <h2>Welcome to Living Bridge Media Canada</h2>
+        <p>
+            Located in Abbotsford BC, we specialize in faith-based communications. We provide expertise in many areas including creative,
+             web and graphic design, and audio production. We are dedicated to connecting creatives with audiences and media partners.
+        </p>
+        <h2>Our services Include</h2>
+        <ul class="main-content-ul">
+            <li>Consulting</li>
+            <li>Marketing</li>
+            <li>Media Promotions</li>
+            <li>Media Buying</li>
+            
+        </ul>
+
+        <h2>Our Clients Include</h2>
+        <p>
+            Insight for Living Canada<br>
+            <em>Spoken Word</em><br><br>
+            Established in 1984, <a class="main-content-link" href="https://www.insightforliving.ca/" target="_blank">Insight for Living Canada</a> is the Canadian contingent of Chuck Swindoll’s international Bible-teaching ministry. 
+            Today Insight for Living airs in every major Canadian Christian radio market, their monthly magazine Insights is distributed to more than
+             7,000 homes, and they are expanding their ministry to include a publishing house. <br><br>
+             
+             The SHIYR Poets<br> 
+             <em>Inspirational Folk Rock</em><br><br>
+             Pronounced “Sheer,” <a class="main-content-link" href="https://theshiyrpoets.com/" target="_blank">the SHIYR Poets</a> are Brian Doerksen, Calum Rees, Brian Thiessen and Teresa Trask. They are a group of friends, songwriters 
+             and musicians who came together to create, record, and perform folk-rock settings of the ancient Psalms.
+        </p>
+
+    </div>
+    
+
+    <!--end body-->
+
+    <%let footer%>
+
+    <% if (authFooter=="true") {footer = "partials/footer.ejs"}else{footer="partials/un-auth-footer.ejs"}%>
+    
+    
+    <%- include(footer); -%>

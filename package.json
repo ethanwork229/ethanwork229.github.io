@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-session": "^2.0.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "https": "^1.0.0",
+    "mongoose": "^6.3.4",
+    "node-fetch": "^3.2.4",
+    "nodemailer": "^6.7.5",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2",
+    "request": "^2.88.2",
+    "uuid": "^8.3.2"
+  },
+  "name": "living-bridge-media-website",
+  "version": "1.0.0",
+  "description": "living bridge media website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanwork229/living-bridge-media-website.git"
+  },
+  "author": "Ethan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethanwork229/living-bridge-media-website/issues"
+  },
+  "homepage": "https://github.com/ethanwork229/living-bridge-media-website#readme"
+}

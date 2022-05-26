@@ -1,0 +1,22 @@
+<%let header%> 
+<% if (authHeader=="true") {header = "partials/header.ejs"}else{header="partials/un-auth-header.ejs"}%> 
+<%- include(header); -%>
+
+<!--body-->
+
+<div class="main-content">
+  <h2>Error, something appears to have gone wrong</h2>
+  <p>
+    Return <a class="main-content-link" href="/home">home</a> or contact us at <a
+    class="main-content-link"
+    href="mailto:livingbridge@insightforliving.ca"
+    >livingbridge@insightforliving.ca</a
+  >.
+  </p>
+</div>
+
+<!--end body-->
+
+<%let footer%> 
+<% if (authFooter=="true") {footer = "partials/footer.ejs"}else{footer="partials/un-auth-footer.ejs"}%> 
+<%- include(footer); -%>

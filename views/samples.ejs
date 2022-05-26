@@ -1,0 +1,113 @@
+<%let header%>
+<% if (authHeader=="true") {header = "partials/header.ejs"}else{header="partials/un-auth-header.ejs"}%>
+
+<%- include(header); -%>
+
+<!--body-->
+
+<div class="main-content">
+  <h2>Samples</h2>
+  <p>
+    Living Bridge Media Canada is proud to offer a wide variety of Insight for
+    Living Canada programming to suit any station’s needs.
+  </p>
+  <p>
+    For programming inquiries email
+    <a class="main-content-link" href="mailto:livingbridge@insightforliving.ca"
+      >livingbridge@insightforliving.ca</a
+    >. Program delivery information can be found in the <a class="main-content-link" href="/programming">Programming tab</a>. Monthly
+    broadcast schedules and promo scripts are available for download from the
+    <a class="main-content-link" href="/programming">Monthly Promo Packs tab</a>.
+  </p>
+  <p>
+    <strong><em>Insight for Living (weekday program [28:30])</em></strong
+    ><br />
+    Insight for Living is the flagship of the Bible-teaching radio ministry of
+    Charles R. Swindoll. Aired since 1979 in the United States and 1984 in
+    Canada, Chuck’s down-to-earth preaching style, humour, and practical
+    application have introduced people around the world to the grace and love of
+    Jesus Christ. Heard across Canada on more than 100 radio facilities, Chuck
+    communicates God’s truth in terms people can understand.<br />
+    <a href="#" class="main-content-link">Sample</a><br />
+    Versions available:
+  </p>
+  <div >
+    <ul class="main-content-ul">
+      <li>Canadian</li>
+      <li>Border</li>
+    </ul>
+  </div>
+
+  <p>
+    <strong><em>Insight for Living (weekend program [28:30])</em></strong
+    ><br />
+    The weekend version of Insight for Living offers listeners a variety of
+    stand-alone messages; each delivered with the same joyful and grace-filled
+    exuberance that marks Chuck’s ministry.<br />
+    <a href="#" class="main-content-link">Sample</a><br />
+    Versions available:
+  </p>
+  <div>
+    <ul class="main-content-ul">
+      <li>Canadian</li>
+      <li>Border</li>
+    </ul>
+  </div>
+  <p>
+    <strong><em>LifeTrac (short feature [5:00])</em></strong
+    ><br />
+    Available only in Canada these five-minute programs feature Chuck’s best
+    stories. You’ll hear his loudest laughs, his funniest experiences, and his
+    famous catch phrases.<br />
+    <a href="#" class="main-content-link">Sample</a><br />
+  </p>
+  <p>
+    <strong><em>Insights (short feature [1:00])</em></strong
+    ><br />
+    In these thought-provoking audio devotionals Chuck challenges and encourages
+    listeners to think about their faith in a new and refreshing way.<br />
+    <a href="#" class="main-content-link">Sample</a><br />
+  </p>
+  <p>
+    <strong><em>Paws & Tales (weekend children’s program [27:30])</em></strong
+    ><br />
+    This popular audio drama is heard every week across the country and over the
+    Internet. The mission of Paws & Tales is to help parents teach biblical
+    theology to kids through memorable, meaningful stories and music.<br />
+    <a href="#" class="main-content-link">Sample</a><br />
+  </p>
+  <p>
+    <strong><em>Vision Para Vivir (weekday program [27:30])</em></strong
+    ><br />
+    Carlos A. Zazueta is the pastor for this Spanish version of Insight for
+    Living. This program began broadcasting in December 1987 and is heard across
+    Latin America, the Caribbean, and some cities in North America and
+    Europe.<br />
+    <a href="#" class="main-content-link">Sample</a><br />
+  </p>
+  <p>
+    <strong><em>Vision Para Vivir (weekend program [27:30])</em></strong
+    ><br />
+    The weekend version of Vision Para Vivir offers listeners a variety of
+    stand-alone messages. Carlos A. Zazueta is the pastor for this Spanish
+    version of Insight for Living.<br />
+    <a href="#" class="main-content-link">Sample</a><br />
+  </p>
+  <p>
+    <strong><em>Viviencias (short feature [1:00])</em></strong
+    ><br />
+    In these thought-provoking Spanish audio devotionals Carlos challenges and
+    encourages listeners to think about their faith in a new and refreshing
+    way.<br />
+    <a href="#" class="main-content-link">Sample</a>
+  </p>
+</div>
+
+<!--end body-->
+
+<%let footer%>
+
+<% if (authFooter=="true") {footer = "partials/footer.ejs"}else{footer="partials/un-auth-footer.ejs"}%>
+
+
+<%- include(footer); -%>

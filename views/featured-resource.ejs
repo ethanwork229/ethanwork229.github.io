@@ -1,0 +1,72 @@
+<%- include("partials/header"); -%>
+
+    <!--body-->
+
+   
+    <div class="main-content">
+        <h2>Featured Resource</h2>
+        <p>
+            <em><strong>January 2021 Premium</strong><br>
+                A Practical Guide to Culture: Helping the Next Generation Navigate Today’s World</em>
+        </p>
+        
+        Stay alert! From Jesus and Peter to Paul and John that theme resounds throughout the New Testament. 
+        Our adversary prowls like a lion. Keep awake! John Stonestreet and Brett Kunkle will help you do just 
+        that. In their excellent book, A Practical Guide to Culture, they equip you with God’s truth to recognize 
+        the Enemy’s schemes that saturate our culture. Fulfill your calling as a proactive and astute child of 
+        God, living in the world but not of it.<br><br>
+        <p><em><strong>Key Features and Options:</strong></em></p>
+        <ul class="main-content-ul">
+            <li>The authors teach readers how to stop giving in to a degrading culture and live without fear and regret</li>
+            <li>Helpful for Christians trying to raise faithful, resilient children in a post-Christian society</li>
+            <li>Filled with clarity, wisdom, and advice on issues facing this generation</li>
+            <li>Helps readers navigate the chaotic ocean of culture with unchanging truth</li>
+            
+        </ul>
+
+        <p><em><strong>Specifications:</strong></em></p>
+        <ul class="main-content-ul">
+            <li>Product Type: Paperback</li>
+            <li>Publisher: David C. Cook</li>
+            <li>Release Date: January 2020</li>
+            <li>Retail Price: $38 (Save 25% in January 2021)</li>
+            <li>Product Code: 1PGCPB</li>
+            
+        </ul>
+        
+        <p><em><strong>Continuous Promotion Guidelines for Participating Stations:</strong></em></p>
+        <ul class="main-content-ul">
+            <li>Limit five (5) products per station per month </li>
+            <li>Product only available for promotions within the given month</li>
+            <li>To ensure timely delivery, please request product as soon as possible</li>
+            <li>To request for multiple stations please submit separately</li>
+            <li>Products will be mailed as soon as they arrive at our warehouse. This is generally within the first two weeks of the month</li>
+            
+        </ul>
+
+        <label class="featured-resource-form-title"><strong>Request Featured Resource</strong></label><br>
+        <form class="featured-resource-form" id="request-featured-resource-form" action="/featured-resource" method="post">
+            
+            <label>First Name <span style="color:#ff0000">*</span></label>
+            <input id="firstName" type="text" required>
+            <label>Last Name <span style="color:#ff0000">*</span></label>
+            <input id="lastName" type="text" required>
+            <label>Radio Station <span style="color:#ff0000">*</span></label>
+            <input id="radioStation" type="text" required>
+            <label>Quantity <span style="color:#ff0000">*</span></label>
+            <input id="quantity" type="number"  min="0" max="5" required>
+            <label>Email Address <span style="color:#ff0000">*</span></label>
+            <input id="email" type="email" required> 
+
+            <button type="submit" name="submit">Submit</button>
+        </form>
+
+        
+        
+
+    </div>
+    <script src="/js/featuredResource.js"></script>
+
+    <!--end body-->
+
+    <%- include("partials/footer"); -%>

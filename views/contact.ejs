@@ -1,0 +1,117 @@
+<%let header%> 
+<% if (authHeader=="true") {header = "partials/header.ejs"}else{header="partials/un-auth-header.ejs"}%> 
+<%- include(header); -%>
+<!--body-->
+
+<div class="main-content main-content-contact">
+  <h2>Contact</h2>
+  <p>
+    <strong>Mailing Address:</strong><br />
+    Living Bridge Media Canada<br />
+    Post Office Box 8 Station A<br />
+    Abbotsford, BC V2T 6Z4<br />
+  </p>
+
+  <p>
+    <strong>Phone: </strong>1.800.663.7639<br />
+    <strong>Fax: </strong>604.870.8743<br />
+    <strong>Email: </strong
+    ><a
+      class="main-content-link"
+      href="emailto:livingbridge@insightforliving.ca"
+      >livingbridge@insightforliving.ca</a
+    ><br />
+  </p>
+
+  <p>
+    <strong>Stop by and visit us personally at:</strong><br />
+    1-30445 Progressive Way<br />
+    Abbotsford, BC V2T 6W3<br />
+    <a
+      class="main-content-link"
+      href="https://www.google.com/maps/place/30445+Progressive+Way+%231,+Abbotsford,+BC+V2T+6W3"
+      target="_blank"
+      >View Map</a
+    ><br />
+  </p>
+
+  <p>
+    Office hours are Monday-Friday, 8:30 a.m. to 4:00 p.m., Pacific Standard
+    Time.
+  </p>
+
+  <label class="featured-resource-form-title"
+    ><strong>Request Featured Resource</strong></label
+  ><br />
+  <form
+    id="contact-form"
+    class="featured-resource-form"
+    action="/contact"
+    method="post"
+  >
+    <label>Name <span style="color: #ff0000">*</span></label>
+    <input type="text" id="username" required />
+    <label>Email Address <span style="color: #ff0000">*</span></label>
+    <input type="email" id="email" required />
+    <label>Subject <span style="color: #ff0000">*</span></label>
+    <input autocomplete="off" type="text" id="subject" required />
+    <label>Message <span style="color: #ff0000">*</span></label>
+    <textarea
+      autocomplete="off"
+      rows="4"
+      cols="100"
+      id="message"
+      required
+    ></textarea>
+    <div></div>
+    <div
+      class="g-recaptcha"
+      data-sitekey="6LfMRxwgAAAAAPRwyRn17lqCz7NfouzEKswH7Uvt"
+    ></div>
+    <div></div>
+    <button type="submit" name="submit">Submit</button>
+  </form>
+</div>
+<script>
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", submitForm);
+
+  function submitForm(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const captcha = document.querySelector("#g-recaptcha-response").value;
+
+    fetch("/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        email: email,
+        subject: subject,
+        message: message,
+        captcha: captcha,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data: ", data);
+        alert(data.message)
+        // alert(data.message);
+      });
+  }
+</script>
+<script src="/js/javascript.js"></script>
+<!--end body-->
+
+<%let footer%> 
+<% if (authFooter=="true") {footer = "partials/footer.ejs"}else{footer="partials/un-auth-footer.ejs"}%> 
+<%-include(footer); -%>
